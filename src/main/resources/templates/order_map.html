@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ch">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="左右结构项目，属于大人员的社交工具">
+    <meta name="keywords" content="左右结构项目 社交 占座 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Bootstrap左右结构响应式后台管理模板</title>
+    <script src="../js/jquery.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/slide.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/flat-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.nouislider.css">
+    <style type="text/css">
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle !important;
+        }
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+        #panel {
+            position: fixed;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 10px;
+            right: 10px;
+            width: 280px;
+        }
+    </style>
+    <link rel="stylesheet" href="//cache.amap.com/lbs/static/main1119.css"/>
+    <script>
+        $(function () {
+            $(".meun-item").click(function () {
+                $(".meun-item").removeClass("meun-item-active");
+                $(this).addClass("meun-item-active");
+                var itmeObj = $(".meun-item").find("img");
+                itmeObj.each(function () {
+                    var items = $(this).attr("src");
+                    items = items.replace("_grey.png", ".png");
+                    items = items.replace(".png", "_grey.png")
+                    $(this).attr("src", items);
+                });
+                var attrObj = $(this).find("img").attr("src");
+                ;
+                attrObj = attrObj.replace("_grey.png", ".png");
+                $(this).find("img").attr("src", attrObj);
+            });
+            $("#topAD").click(function () {
+                $("#topA").toggleClass(" glyphicon-triangle-right");
+                $("#topA").toggleClass(" glyphicon-triangle-bottom");
+            });
+            $("#topBD").click(function () {
+                $("#topB").toggleClass(" glyphicon-triangle-right");
+                $("#topB").toggleClass(" glyphicon-triangle-bottom");
+            });
+            $("#topCD").click(function () {
+                $("#topC").toggleClass(" glyphicon-triangle-right");
+                $("#topC").toggleClass(" glyphicon-triangle-bottom");
+            });
+            $(".toggle-btn").click(function () {
+                $("#leftMeun").toggleClass("show");
+                $("#rightContent").toggleClass("pd0px");
+            })
+        })
+    </script>
+
+</head>
+<body>
+
+
+<div id="wrap">
+    <!-- 左侧菜单栏目块 -->
+    <div class="leftMeun" id="leftMeun">
+        <div id="logoDiv">
+            <p id="logoP"><img id="logo" alt="快递小哥" src="../images/head.png"><span>快递小哥</span></p>
+        </div>
+        <div id="personInfor">
+            <p id="userName"></p>
+            <p>
+                <a>退出登录</a>
+            </p>
+        </div>
+        <div class="meun-title">数据管理</div>
+        <div class="meun-item" onclick="window.location='../user/usermanager';" aria-controls="sour" role="tab"
+             data-toggle="tab"><img
+                src="../images/icon_chara_grey.png">用户管理
+        </div>
+        <div class="meun-item  meun-item-active" onclick="window.location='../order/map';" aria-controls="char"
+             role="tab" data-toggle="tab"><img
+                src="../images/icon_map_grey.png">订单地图
+        </div>
+        <div class="meun-item" href="#user" onclick="window.location='../order/listIndex'" aria-controls="user" role="tab" data-toggle="tab"><img
+                src="../images/icon_user_grey.png">用户管理
+        </div>
+        <div class="meun-item"  onclick="window.location='../ticket/ticketIndex'"  aria-controls="chan" role="tab" data-toggle="tab"><img
+                src="../images/icon_change_grey.png">工单管理
+        </div>
+        <div class="meun-title">统计</div>
+        <div class="meun-item" onclick="window.location='../count/index'" aria-controls="scho" role="tab" data-toggle="tab"><img
+                src="../images/icon_house_grey.png">数据统计
+        </div>
+        <div class="meun-item" href="#regu" aria-controls="regu" role="tab" data-toggle="tab"><img
+                src="../images/icon_rule_grey.png">规则管理
+        </div>
+        <div class="meun-item" href="#stud" aria-controls="stud" role="tab" data-toggle="tab"><img
+                src="../images/icon_card_grey.png">人员信息
+        </div>
+        <div class="meun-item" href="#sitt" aria-controls="sitt" role="tab" data-toggle="tab"><img
+                src="../images/icon_char_grey.png">座位管理
+        </div>
+    </div>
+
+    <!-- 右侧具体内容栏目 -->
+    <div id="rightContent">
+        <div id="container" class="container" style="margin-left: 200px">
+        </div>
+        <div id="panel"></div>
+    </div>
+
+</div>
+
+<script src="../js/jquery.nouislider.js"></script>
+<link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+<script src="https://webapi.amap.com/maps?v=1.4.10&key=e77295c0a6d4d4ed3b91b307dd6cc623&plugin=AMap.Walking"></script>
+<script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+<script type="text/javascript">
+    var map = new AMap.Map("container", {
+        center: [116.397559, 39.89621],
+        zoom: 14
+    });
+    var walkOption = {
+        map: map,
+        panel: "panel",
+        hideMarkers: false,
+        isOutline: true,
+        outlineColor: '#ffeeee',
+        autoFitView: true
+    };
+    var walking = new AMap.Walking(walkOption);
+    walking.search([116.399028, 39.845042], [116.436281, 39.880719], function(status, result) {
+        if (status === 'complete') {
+            log.success('步行路线数据查询成功')
+        } else {
+            log.error('步行路线数据查询失败' + result)
+        }
+    });
+</script>
+<script type="text/javascript">
+    //获取cookie
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    var user = getCookie("username");
+    document.getElementById("userName").innerText = "欢迎管理员：" + user;
+
+</script>
+</body>
+
+</html>

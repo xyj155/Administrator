@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.admin.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.example.admin.bean.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="userhead" jdbcType="VARCHAR" property="userhead" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="ime" jdbcType="VARCHAR" property="ime" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="active" jdbcType="INTEGER" property="active" />
+    <result column="vip" jdbcType="INTEGER" property="vip" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="latintude" jdbcType="DOUBLE" property="latintude" />
+    <result column="longtitude" jdbcType="DOUBLE" property="longtitude" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+
+
+    <select id="selectUserByUser" resultMap="BaseResultMap" parameterType="com.example.admin.bean.User">
+        SELECT  * FROM  user WHERE username=#{username,jdbcType=VARCHAR} AND  password = #{password,jdbcType=VARCHAR}
+    </select>
+
+
+    <select id="selectAllUsers" resultMap="BaseResultMap">
+          SELECT  *  FROM user
+    </select>
+
+
+
+</mapper>

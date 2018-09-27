@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.admin.dao.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.example.admin.bean.Order">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="startlocation" jdbcType="VARCHAR" property="startlocation" />
+    <result column="ordernum" jdbcType="VARCHAR" property="ordernum" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="usertel" jdbcType="VARCHAR" property="usertel" />
+    <result column="idcard" jdbcType="VARCHAR" property="idcard" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="endlocation" jdbcType="VARCHAR" property="endlocation" />
+  </resultMap>
+
+
+
+    <select id="selectAllOrders" resultMap="BaseResultMap">
+        SELECT * FROM `order`
+    </select>
+
+</mapper>
