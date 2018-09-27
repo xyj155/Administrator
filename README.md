@@ -3,8 +3,9 @@
 
 
 [![Build Status](https://travis-ci.org/pagehelper/Mybatis-PageHelper.svg?branch=master)](https://travis-ci.org/pagehelper/Mybatis-PageHelper)
+
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/com.github.pagehelper/pagehelper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.pagehelper/pagehelper)
-[![Dependency Status](https://www.versioneye.com/user/projects/5932123f22f278003c5f851e/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5932123f22f278003c5f851e)
+
 
 这个项目是基于Spring Boot开发的后台管理系统
 采用框架模式：SSM
@@ -14,4 +15,29 @@
   ####  Spring Boot
   ####  PagerHelper
   ####  mysqlConnector
+  
+### 项目截图：
+
+![image](http://bmob-cdn-20920.b0.upaiyun.com/2018/09/27/cb0842db4028733f802eaf452ddb536e.png)
+
+
+![image](http://bmob-cdn-20920.b0.upaiyun.com/2018/09/27/a85f356a4036a98380cb72bf5555e405.png)
+
+
+![image](http://bmob-cdn-20920.b0.upaiyun.com/2018/09/27/4cad28ed40b4e53b80f2e952727412ad.png)
+
+
+![image](http://bmob-cdn-20920.b0.upaiyun.com/2018/09/27/526b1b7a4077e9f9806a5e498b2f8554.png)
+ 
+### 本人博客：
+#### CSDN：[CSDN博客](https://blog.csdn.net/qq_33163983 "悬停显示")  
+#### 简书：[简书博客](https://www.jianshu.com/u/a09ef2f2fe67 "悬停显示")  
+  
+### 个人联系方式：
+
+#### 微信：
+![image](http://bmob-cdn-20920.b0.upaiyun.com/2018/08/06/3248a1cc4075a1d7807afabf9210dca7.png)
+
+#### QQ： 1789780841
+
   
