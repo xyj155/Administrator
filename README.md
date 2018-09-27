@@ -11,10 +11,30 @@
 采用框架模式：SSM
 
 ### 框架：
-  ####  Mybatis   
+
+  ####  Mybatis  
+  
   ####  Spring Boot
+  
   ####  PagerHelper
+  
   ####  mysqlConnector
+  
+### 项目总结：
+
+##### 学习Spring 集成MyBatis
+
+##### MyBatis Mapper自动生成插件 MyBatis Gennerator
+
+##### HTML界面设计
+
+##### JQuery 框架请求数据
+
+##### BootStrap UI框架
+
+##### JavaScript 语言学习
+
+##### Java Spring Boot 学习
   
 ### 项目截图：
 
